@@ -1,8 +1,16 @@
 import React, { useState } from 'react';
-import { View, Text, TouchableOpacity, TextInput, Alert } from 'react-native';
+import {
+  View,
+  Text,
+  TouchableOpacity,
+  TextInput,
+  Alert,
+  KeyboardAvoidingView,
+} from 'react-native';
 import { navigateTo } from 'src/navigation';
 import { authRequest } from 'services/requests';
 import base64 from 'react-native-base64';
+
 //styles
 import styles from './styles';
 
@@ -22,7 +30,7 @@ export default function SignIn({ componentId }) {
     }
   };
   return (
-    <View style={styles.container}>
+    <KeyboardAvoidingView behavior="padding" style={styles.container}>
       <TextInput
         placeholder="Enter your github username"
         style={styles.input}
@@ -39,6 +47,6 @@ export default function SignIn({ componentId }) {
       <TouchableOpacity style={styles.button} onPress={encode}>
         <Text style={styles.button_text}>Sign In</Text>
       </TouchableOpacity>
-    </View>
+    </KeyboardAvoidingView>
   );
 }
