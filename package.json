@@ -8,6 +8,7 @@
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "pod:clean": "cd ios && pod deintegrate && pod clean && pod install && cd ../",
+    "postinstall": "npm run pod:clean",
     "watchman": "watchman watch-del-all && rm -rf $TMPDIR/react-* && rm -rf node_modules/ && npm cache verify && npm install && npm start -- --reset-cache"
   },
   "dependencies": {
