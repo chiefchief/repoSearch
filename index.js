@@ -10,9 +10,12 @@ Navigation.events().registerAppLaunchedListener(() => {
   Navigation.setDefaultOptions({
     topBar: {
       visible: false,
+      height: 0,
     },
     statusBar: {
       style: 'dark',
+      backgroundColor: '#00000000',
+      drawBehind: true,
     },
   });
 
@@ -23,6 +26,12 @@ Navigation.events().registerAppLaunchedListener(() => {
           {
             component: {
               name: 'SignIn',
+              options: {
+                topBar: {
+                  visible: false,
+                  height: 0,
+                },
+              },
             },
           },
         ],

@@ -8,7 +8,7 @@ import {
   ActivityIndicator,
   Keyboard,
 } from 'react-native';
-import { exitApp } from 'src/navigation';
+import { back } from 'src/navigation';
 import { connect } from 'react-redux';
 import { getRepositories, resetRepositories } from 'reducers/repositories';
 import RepoContainer from 'containers/repo-container';
@@ -56,7 +56,7 @@ function Main({ componentId, repositories, dispatch }) {
   };
   const exit = () => {
     dispatch(resetRepositories());
-    exitApp();
+    back(componentId);
   };
   const changeText = text => {
     setRepositoryName(text);
