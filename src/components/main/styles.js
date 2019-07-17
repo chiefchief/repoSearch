@@ -1,5 +1,4 @@
-import { StyleSheet, Dimensions } from 'react-native';
-const { width } = Dimensions.get('window');
+import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
   container: {
@@ -11,10 +10,6 @@ export default StyleSheet.create({
   search_fields: {
     flexDirection: 'row',
     paddingHorizontal: 16,
-  },
-  label: {
-    fontSize: 16,
-    marginBottom: 6,
   },
   input: {
     flex: 1,
@@ -57,29 +52,9 @@ export default StyleSheet.create({
     fontWeight: '500',
   },
   flat: {
-    // flex: 1,
     width: '100%',
     paddingHorizontal: 16,
     marginVertical: 16,
-  },
-  sort_fields: {
-    flexDirection: 'row',
-    marginTop: 16,
-    paddingHorizontal: 16,
-  },
-  sort_button: {
-    flex: 1,
-    height: 40,
-    backgroundColor: '#3a3a3a',
-    borderRadius: 8,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  last_sort_button: {
-    marginLeft: 16,
-  },
-  active_sort: {
-    backgroundColor: '#6e6e6e',
   },
   indicator: {
     color: '#000',

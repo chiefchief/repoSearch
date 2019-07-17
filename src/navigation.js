@@ -1,13 +1,5 @@
 import { Navigation } from 'react-native-navigation';
 
-export const navigate = (componentId, routeTo) => {
-  Navigation.push(componentId, {
-    component: {
-      name: routeTo,
-    },
-  });
-};
-
 export const back = componentId => {
   Navigation.pop(componentId);
 };
